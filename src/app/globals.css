@@ -5,6 +5,7 @@
   --foreground: #171717;
   --primary: #7065f0;
   --text: #000929;
+  --backgroundNavbar: #edecfb;
 }
 
 @theme inline {
@@ -13,6 +14,7 @@
   --font-sans: var(--font-sans);
   --color-primary: var(--primary);
   --color-text: var(--text);
+  --color-backgroundNavbar: var(--backgroundNavbar);
 }
 
 @media (prefers-color-scheme: dark) {
