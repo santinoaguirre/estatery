@@ -12,13 +12,14 @@ export default function SearchBar() {
 
   return (
     <div className="bg-white rounded-lg flex flex-col">
-      <div className="flex">
+      <div className="flex w-full">
         {TABS.map((tab) => (
           <SearchTabButton
             key={tab}
             text={tab}
             activated={activeTab === tab}
             onClick={() => setActiveTab(tab)}
+            className="flex-1"
           />
         ))}
       </div>

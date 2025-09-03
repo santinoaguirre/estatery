@@ -4,12 +4,14 @@ type SearchTabButtonProps = {
   text: string;
   activated: boolean;
   onClick: () => void;
+  className?: string;
 };
 
 export default function SearchTabButton({
   text,
   activated,
   onClick,
+  className = "",
 }: SearchTabButtonProps) {
   return (
     <button
@@ -20,6 +22,7 @@ export default function SearchTabButton({
             ? "text-primary border-primary border-b-2 font-bold"
             : "text-foreground border-b border-shadowPrimary"
         }
+        ${className}
       `}
     >
       {text}
