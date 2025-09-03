@@ -6,12 +6,12 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="bg-gradient-to-b from-hero-start to-hero-end h-screen lg:mt-16 px-6 lg:px-0 mt-12">
-      <div className="flex flex-col lg:ml-40 gap-y-12">
-        <div className="flex flex-col gap-y-8">
-          <h1 className="font-bold xl:text-6xl text-4xl text-center lg:text-left">
+      <div className="flex flex-col lg:ml-40 gap-y-12 lg:w-1/2">
+        <div className="flex flex-col gap-y-8 text-center lg:text-left">
+          <h1 className="font-bold lg:text-6xl text-4xl">
             Buy, rent, or sell your property easily
           </h1>
-          <p className="font-medium text-xl text-center">
+          <p className="font-medium text-xl">
             A great platform to buy, sell, or even rent your properties without
             any commisions.
           </p>
@@ -36,7 +36,14 @@ export default function Home() {
 
           <StatCard
             title="10k+ properties"
-            text="ready for occupancy"
+            text={
+              <>
+                <span className="hidden lg:inline">
+                  and house ready for occupancy
+                </span>
+                <span className="inline lg:hidden">ready for occupancy</span>
+              </>
+            }
             icon={
               <Image
                 src="/icons/apartaments.svg"

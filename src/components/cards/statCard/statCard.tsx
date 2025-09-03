@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 type StatCardProps = {
   title: string;
-  text: string;
+  text: string | ReactNode;
   icon: ReactNode;
   subIcon: ReactNode;
 };
