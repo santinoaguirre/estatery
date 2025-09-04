@@ -97,7 +97,7 @@ export default function Home() {
       </div>
 
       <div className="lg:px-12 xl:px-40 xl:flex xl:flex-row xl:gap-x-16 xl:pb-24 4xl:justify-between">
-        <div className="rounded-lg border-2 border-shadowPrimary mt-16 w-fit md:mx-auto mx-0 xl:mx-0 xl:w-[416px] xl:flex xl:flex-col xl:justify-between">
+        <div className="rounded-lg border-2 border-shadowPrimary bg-[#f7f7fd] mt-16 w-fit md:mx-auto mx-0 xl:mx-0 xl:w-[416px] xl:flex xl:flex-col xl:justify-between">
           <div className="p-8 lg:pr-16">
             <h3 className="font-bold text-3xl text-secondary">
               The new way to find your new home
