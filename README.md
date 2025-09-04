@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Estatery — Prueba Técnica Frontend
 
-## Getting Started
+Proyecto de evaluación para el puesto de Frontend Developer Ssr (Next.js, React, Zustand/Redux, Tailwind). El objetivo es demostrar buenas prácticas de desarrollo, organización, estado global, componentes reutilizables y estilos consistentes.
 
-First, run the development server:
+## Stack
+- Next.js (React)
+- Zustand (estado global)
+- Tailwind CSS (estilos utilitarios)
+- TypeScript
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Características clave
+- Barra de búsqueda con estado global (Zustand) y actualización reactiva de resultados.
+- Componentes reutilizables y desacoplados (por ejemplo, `SearchBar`, tarjetas/listado).
+- Estilos con Tailwind y diseño responsive mobile‑first.
+- Enrutamiento con Next.js y organización por features.
+- Accesibilidad básica
+- SEO básico + Open Graph
+
+
+## Empezar
+1) Instalar dependencias
+```
+# con npm	npm install
+# o yarn	yarn
+# o pnpm	pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2) Desarrollo
+```
+# ejecuta el servidor de desarrollo en http://localhost:3000
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3) Build y producción
+```
+# compila la aplicación
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# inicia en modo producción (requiere build previo)
+npm run start
+```
 
-## Learn More
+## Estructura del proyecto (resumen)
+- `src/components/` — Componentes UI reutilizables
+  - `src/components/searchBar/` — Barra de búsqueda (`searchBar.tsx`)
+- `src/store/` — Estado global (por ejemplo, `useSearchStore.ts` con Zustand)
+- `public/` — Activos estáticos (imágenes, íconos)
 
-To learn more about Next.js, take a look at the following resources:
+## Decisiones técnicas
+- Zustand para estado global: API simple, poco boilerplate y excelente DX. Ideal para filtros y UI state. Si el proyecto exige flujos más complejos, Redux es fácilmente intercambiable.
+- Tailwind CSS para velocidad de desarrollo y consistencia visual sin sobrecargar el bundle con CSS global innecesario.
+- Next.js por su enrutamiento basado en archivos, optimizaciones de rendimiento y despliegue simplificado.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
+### Mobile
+![Mobile](public/screenshots/mobile.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Desktop
+![Desktop](public/screenshots/desktop.png)
