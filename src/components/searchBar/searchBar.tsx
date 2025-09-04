@@ -25,8 +25,7 @@ export default function SearchBar() {
       <div
         className="
     flex rounded-t-lg bg-white
-    w-full lg:w-7/12 xl:w-6/12
-    2xl:w-[300px] 2xl:flex-none 2xl:shrink-0
+    w-full lg:w-7/12 xl:w-6/12 2xl:!w-4/12
     self-start
   "
       >
@@ -41,8 +40,8 @@ export default function SearchBar() {
         ))}
       </div>
 
-      <div className="p-4 flex flex-row items-center justify-between rounded-bl-lg rounded-br-lg lg:divide-x divide-shadowPrimary lg:rounded-tr-lg lg:px-2 xl:px-8 lg:py-6 bg-white">
-        <div className="lg:flex lg:flex-col px-4">
+      <div className="p-4 flex flex-row items-center justify-between rounded-bl-lg rounded-br-lg lg:divide-x divide-shadowPrimary lg:rounded-tr-lg lg:px-2 lg:py-6 bg-white">
+        <div className="lg:flex lg:flex-col px-4 2xl:w-1/3">
           <label className="hidden lg:block lg:text-gray-500">Location</label>
           <input
             type="text"
@@ -51,7 +50,7 @@ export default function SearchBar() {
           />
         </div>
 
-        <div className="hidden lg:flex lg:flex-col px-4">
+        <div className="hidden lg:flex lg:flex-col px-4 2xl:w-1/3">
           <label className="lg:block lg:text-gray-500">When</label>
           <div className="flex items-center">
             <input
@@ -63,7 +62,7 @@ export default function SearchBar() {
           </div>
         </div>
 
-        <div className="px-4">
+        <div className="px-4 2xl:w-1/3 2xl:flex 2xl:justify-center">
           <PrimaryButton
             params={{
               text: isLg ? "Browse Properties" : <RiSearch2Line />,
