@@ -60,6 +60,7 @@ export default function NavBar() {
             params={{
               text: "Sign Up",
               onClick: () => console.log("Sign Up clicked"),
+              className: "p-6",
             }}
           />
         </div>
@@ -126,6 +127,7 @@ export default function NavBar() {
                   console.log("Sign Up clicked");
                   setIsOpen(false);
                 },
+                className: "p-6",
               }}
             />
           </div>

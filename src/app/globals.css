@@ -24,6 +24,9 @@
   --text-4xl: 40px;
   --color-shadowPrimary: var(--shadowPrimary);
   --color-blackText: var(--blackText);
+  --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1536px;
+  --breakpoint-4xl: 1920px;
 }
 
 body {
