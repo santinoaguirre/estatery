@@ -24,7 +24,7 @@ export default function Home() {
             <SearchBar />
           </div>
 
-          <div className="flex flex-row items-center justify-between xl:justify-start xl:gap-x-36 lg:pr-8">
+          <div className="flex flex-row items-center justify-between md:justify-around lg:justify-between xl:justify-start xl:gap-x-36 lg:pr-8">
             <StatCard
               title="50k+ renters"
               text="believe in our service"
@@ -96,111 +96,114 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="rounded-lg border-2 border-shadowPrimary mt-16">
-        <div className="p-8">
-          <h3 className="font-bold text-3xl text-secondary">
-            The new way to find your new home
-          </h3>
-          <p className="text-secondary opacity-70 my-5">
-            Find your dream place to live in with more than 10k+ properties
-            listed.
-          </p>
-          <SecondaryButton
-            params={{
-              text: "Browse Properties",
-              className: "px-4",
-            }}
+      <div className="lg:px-12 xl:px-40 xl:flex xl:flex-row xl:gap-x-16 xl:pb-24 4xl:justify-between">
+        <div className="rounded-lg border-2 border-shadowPrimary mt-16 w-fit md:mx-auto mx-0 xl:mx-0 xl:w-[416px] xl:flex xl:flex-col xl:justify-between">
+          <div className="p-8 lg:pr-16">
+            <h3 className="font-bold text-3xl text-secondary">
+              The new way to find your new home
+            </h3>
+            <p className="text-secondary opacity-70 my-5">
+              Find your dream place to live in with more than 10k+ properties
+              listed.
+            </p>
+            <SecondaryButton
+              params={{
+                text: "Browse Properties",
+                className: "px-4",
+              }}
+            />
+          </div>
+          <Image
+            src="/img/property.png"
+            alt="Property"
+            width={500}
+            height={400}
+            className="w-full lg:w-10/12 lg:ml-auto rounded-br-lg"
           />
         </div>
-        <Image
-          src="/img/property.png"
-          alt="Property"
-          width={500}
-          height={400}
-        />
-      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
-        <BenefitCard
-          title="Property Insurance"
-          text="We offer our customer property protection of liability coverage and insurance for their better life."
-          icon={
-            <Image
-              src={"/icons/propertyCheck.svg"}
-              alt="Property Insurance"
-              width={32}
-              height={32}
-            />
-          }
-          subIcon={
-            <Image
-              src={"/icons/insurance.svg"}
-              alt="Insurance"
-              width={32}
-              height={32}
-            />
-          }
-        />
-        <BenefitCard
-          title="Best Price"
-          text="Not sure what you should be charging for your property? No need to worry, let us do the numbers for you."
-          icon={
-            <Image
-              src={"/icons/ticketPrice.svg"}
-              alt="Best Price"
-              width={32}
-              height={32}
-            />
-          }
-          subIcon={
-            <Image
-              src={"/icons/discount.svg"}
-              alt="Best Price"
-              width={32}
-              height={32}
-            />
-          }
-        />
-        <BenefitCard
-          title="Lowest Commission"
-          text="You no longer have to negotiate commissions and haggle with other agents it only cost 2%!"
-          icon={
-            <Image
-              src={"/icons/lowCommission.svg"}
-              alt="Lowest Commission"
-              width={32}
-              height={32}
-            />
-          }
-          subIcon={
-            <Image
-              src={"/icons/price.svg"}
-              alt="Lowest Commission"
-              width={32}
-              height={32}
-            />
-          }
-        />
-        <BenefitCard
-          title="Overall Control"
-          text="Get a virtual tour, and schedule visits before you rent or buy any properties. You get overall control."
-          icon={
-            <Image
-              src={"/icons/locationControl.svg"}
-              alt="Overall Control"
-              width={32}
-              height={32}
-            />
-          }
-          subIcon={
-            <Image
-              src={"/icons/control.svg"}
-              alt="Overall Control"
-              width={32}
-              height={32}
-            />
-          }
-        />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-y-16 xl:gap-x-16 lg:gap-x-6 mt-16 xl:w-3/6 2xl:w-full">
+          <BenefitCard
+            title="Property Insurance"
+            text="We offer our customer property protection of liability coverage and insurance for their better life."
+            icon={
+              <Image
+                src={"/icons/propertyCheck.svg"}
+                alt="Property Insurance"
+                width={32}
+                height={32}
+              />
+            }
+            subIcon={
+              <Image
+                src={"/icons/insurance.svg"}
+                alt="Insurance"
+                width={32}
+                height={32}
+              />
+            }
+          />
+          <BenefitCard
+            title="Best Price"
+            text="Not sure what you should be charging for your property? No need to worry, let us do the numbers for you."
+            icon={
+              <Image
+                src={"/icons/ticketPrice.svg"}
+                alt="Best Price"
+                width={32}
+                height={32}
+              />
+            }
+            subIcon={
+              <Image
+                src={"/icons/discount.svg"}
+                alt="Best Price"
+                width={32}
+                height={32}
+              />
+            }
+          />
+          <BenefitCard
+            title="Lowest Commission"
+            text="You no longer have to negotiate commissions and haggle with other agents it only cost 2%!"
+            icon={
+              <Image
+                src={"/icons/lowCommission.svg"}
+                alt="Lowest Commission"
+                width={32}
+                height={32}
+              />
+            }
+            subIcon={
+              <Image
+                src={"/icons/price.svg"}
+                alt="Lowest Commission"
+                width={32}
+                height={32}
+              />
+            }
+          />
+          <BenefitCard
+            title="Overall Control"
+            text="Get a virtual tour, and schedule visits before you rent or buy any properties. You get overall control."
+            icon={
+              <Image
+                src={"/icons/locationControl.svg"}
+                alt="Overall Control"
+                width={32}
+                height={32}
+              />
+            }
+            subIcon={
+              <Image
+                src={"/icons/control.svg"}
+                alt="Overall Control"
+                width={32}
+                height={32}
+              />
+            }
+          />
+        </div>
       </div>
     </main>
   );
