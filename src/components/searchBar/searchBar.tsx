@@ -5,12 +5,10 @@ import SearchTabButton from "../buttons/searchTabButton";
 import { RiSearch2Line } from "react-icons/ri";
 import { LuCalendarDays } from "react-icons/lu";
 import PrimaryButton from "../buttons/primaryButton";
-
-const TABS = ["Rent", "Buy", "Sell"] as const;
-type Tab = (typeof TABS)[number];
+import { TABS, useSearchStore } from "@/store/useSearchStore";
 
 export default function SearchBar() {
-  const [activeTab, setActiveTab] = useState<Tab>("Rent");
+  const { activeTab, setActiveTab } = useSearchStore();
   const [isLg, setIsLg] = useState(false);
 
   useEffect(() => {
