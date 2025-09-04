@@ -79,7 +79,7 @@ export default function NavBar() {
       {isOpen && (
         <div
           id="mobile-menu"
-          className={`xl:hidden bg-backgroundNavbar px-9 overflow-hidden transition-all duration-300 ${
+          className={`xl:hidden bg-backgroundNavbar absolute w-full px-9 overflow-hidden transition-all duration-300 ${
             isOpen ? "max-h-[500px] py-4" : "max-h-0 py-0"
           }`}
         >
@@ -100,13 +100,23 @@ export default function NavBar() {
               </Link>
             </li>
             <li>
-              <Link href="/manage-property" onClick={() => setIsOpen(false)}>
+              <Link
+                href="/manage-property"
+                onClick={() => setIsOpen(false)}
+                className="flex flex-row items-center"
+              >
                 Manage Property
+                <FaChevronDown className="w-4 h-4 ml-3" aria-hidden="true" />
               </Link>
             </li>
             <li>
-              <Link href="/resources" onClick={() => setIsOpen(false)}>
+              <Link
+                href="/resources"
+                onClick={() => setIsOpen(false)}
+                className="flex flex-row items-center"
+              >
                 Resources
+                <FaChevronDown className="w-4 h-4 ml-3" aria-hidden="true" />
               </Link>
             </li>
           </ul>
