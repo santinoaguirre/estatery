@@ -1,19 +1,20 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 type Props = {
   params: {
-    text?: string;
+    text: string | ReactNode;
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    className?: string;
   };
 } & React.HTMLAttributes<HTMLButtonElement>;
 
 export default function SecondaryButton({ params, ...rest }: Props) {
-  const { text, onClick } = params;
+  const { text, onClick, className } = params;
   return (
     <button
       {...rest}
       onClick={onClick}
-      className="text-text border-2 border-[#e0def7] font-bold rounded-lg text-center px-6 py-3 cursor-pointer"
+      className={`text-white bg-secondary font-bold rounded-lg text-center py-3 cursor-pointer ${className}`}
     >
       {text}
     </button>

@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryButton from "../buttons/primaryButton";
-import SecondaryButton from "../buttons/secondaryButton";
 import { FaChevronDown } from "react-icons/fa6";
 import { TbMenu } from "react-icons/tb";
 import { useState } from "react";
+import NoBackgroundButton from "../buttons/noBackgroundButton";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,7 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="xl:flex gap-4 hidden">
-          <SecondaryButton
+          <NoBackgroundButton
             params={{
               text: "Login",
               onClick: () => console.log("Login clicked"),
@@ -111,7 +111,7 @@ export default function NavBar() {
             </li>
           </ul>
           <div className="mt-4 flex flex-col gap-3">
-            <SecondaryButton
+            <NoBackgroundButton
               params={{
                 text: "Login",
                 onClick: () => {

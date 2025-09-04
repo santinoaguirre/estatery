@@ -4,6 +4,7 @@
   --background: #e0def7;
   --foreground: #171717;
   --primary: #7065f0;
+  --secondary: #100a55;
   --text: #000929;
   --backgroundNavbar: #edecfb;
   --hero-start: #e3e1f8;
@@ -17,6 +18,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --color-text: var(--text);
   --color-backgroundNavbar: var(--backgroundNavbar);
   --color-hero-start: var(--hero-start);
